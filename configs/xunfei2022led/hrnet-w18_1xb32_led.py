@@ -28,4 +28,4 @@ optimizer_config = dict(grad_clip=None)
 lr_config = dict(policy='CosineAnnealing', min_lr=0)
 runner = dict(type='EpochBasedRunner', max_epochs=50)
 
-evaluation = dict(interval=1, metric=[ 'accuracy', 'precision', 'recall', 'f1_score', 'support'])
+evaluation = dict(interval=1, metric=[ 'accuracy', 'precision', 'recall', 'f1_score'])

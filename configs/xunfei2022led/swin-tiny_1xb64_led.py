@@ -1,7 +1,7 @@
 _base_ = [
-    './_base_/models/swin_transformer/tiny_224.py',
-    './_base_/datasets/led_bs64_swin_224.py',
-    './_base_/default_runtime.py'
+    '../_base_/models/swin_transformer/tiny_224.py',
+    '../_base_/datasets/led_bs64_swin_224.py',
+    '../_base_/default_runtime.py'
 ]
 
 
@@ -52,4 +52,4 @@ lr_config = dict(
     warmup_by_epoch=True)
 
 runner = dict(type='EpochBasedRunner', max_epochs=50)
-evaluation = dict(interval=1, metric=[ 'accuracy', 'precision', 'recall', 'f1_score', 'support'])
+evaluation = dict(interval=1, metric=[ 'accuracy', 'precision', 'recall', 'f1_score'])

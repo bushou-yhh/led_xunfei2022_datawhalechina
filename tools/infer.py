@@ -12,9 +12,9 @@ from mmcls.apis import inference_model, init_model, show_result_pyplot
 
 def main():
     parser = ArgumentParser()
-    parser.add_argument('img_dir', help='Image file dictionary')
-    parser.add_argument('--config', help='Config file(str or list)')
-    parser.add_argument('--checkpoint', help='Checkpoint file(str or list)')
+    parser.add_argument('--img_dir', default='data/led/test', help='Image file dictionary')
+    parser.add_argument('--config', default="configs/xunfei2022led/resnet34_1xb32_led.py", help='Config file(str or list)')
+    parser.add_argument('--checkpoint', default="training/resnet50_1xb32_led/epoch_50.pth", help='Checkpoint file(str or list)')
     parser.add_argument(
         '--result_csv_file', default='result.csv', help='the result csv file')
     parser.add_argument(
@@ -36,7 +36,7 @@ def main():
 
     # write to the csv file
     headers = ['image', 'label']
-    with open(result, 'w') as f:
+    with open(result, 'w', newline="") as f:
         f_csv = csv.writer(f)
         f_csv.writerow(headers)
 

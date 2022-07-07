@@ -1,6 +1,6 @@
 _base_ = [
-    './_base_/models/resnet50.py', './_base_/datasets/led_bs32.py',
-    './_base_/default_runtime.py'
+    '../_base_/models/resnet50.py', '../_base_/datasets/led_bs32.py',
+    '../_base_/default_runtime.py'
 ]
 
 
@@ -29,4 +29,4 @@ runner = dict(type='EpochBasedRunner', max_epochs=50)
 
 
 
-evaluation = dict(interval=1, metric=[ 'accuracy', 'precision', 'recall', 'f1_score', 'support'])
+evaluation = dict(interval=1, metric=[ 'accuracy', 'precision', 'recall', 'f1_score'])

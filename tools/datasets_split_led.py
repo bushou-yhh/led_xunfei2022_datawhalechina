@@ -40,7 +40,8 @@ def train_val_split(imgs,ratio_train=0.8, ratio_val=0.2):
 if __name__ == '__main__':
     good_img_path = "data/led/good"
     bad_img_path = "data/led/bad_aug"
-    
+    if not os.path.exists(bad_img_path):
+        os.makedirs(bad_img_path)
     aug_for_bad()
 
     good_imgs =  os.listdir(good_img_path)
