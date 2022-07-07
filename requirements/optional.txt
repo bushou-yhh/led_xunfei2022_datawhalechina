@@ -1,0 +1,6 @@
+albumentations>=0.3.2 --no-binary qudida,albumentations
+colorama
+requests
+rich
+Pillow==8.3.2
+tensorboard
